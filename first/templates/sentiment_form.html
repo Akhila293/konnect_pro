@@ -1,0 +1,17 @@
+<!-- sentiment_form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis</title>
+</head>
+<body>
+    <h1>Sentiment Analysis</h1>
+    <form method="post" action="{% url 'analyze_sentiment' %}">
+       {% csrf_token %} 
+        <label for="text">Enter text:</label>
+        <textarea name="text" rows="4" cols="50"></textarea>
+        <br>
+        <input type="submit" value="Analyze">
+    </form>
+</body>
+</html>
